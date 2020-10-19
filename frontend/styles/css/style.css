@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  font-family: "Raleway", Courier, monospace;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+header .header-container {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  flex-direction: column;
+}
+header .header-container img {
+  width: 100%;
+  height: auto;
+}
+header .header-container h1 {
+  position: relative;
+  bottom: 16rem;
+  font-size: 4.3rem;
+  font-weight: 700;
+  color: white;
+}
+@media (max-width: 767px) {
+  header .header-container h1 {
+    font-size: 1.5rem;
+    bottom: 5.8rem;
+  }
+}
+header .header-container p {
+  color: gray;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  padding: 0 3rem;
+  position: relative;
+  bottom: 3.5rem;
+  width: 90%;
+  margin-left: 5rem;
+}
+@media (max-width: 767px) {
+  header .header-container p {
+    font-size: 1rem;
+    bottom: 1.3rem;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+header .header-container a {
+  color: darkcyan;
+  font-size: larger;
+  font-weight: 700;
+  text-decoration: none;
+}
+header .header-container a span {
+  font-size: 15px;
+  position: relative;
+  bottom: 2px;
+}
+@media (max-width: 767px) {
+  header .header-container a span {
+    font-size: 10px;
+  }
+}
+@media (max-width: 767px) {
+  header .header-container a {
+    font-size: small;
+  }
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.main-container .main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.main-container .main .elo7-team {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding: 50px 50px;
+}
+@media (max-width: 767px) {
+  .main-container .main .elo7-team {
+    width: fit-content;
+  }
+}
+.main-container .main .elo7-team .ceo-container {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.main-container .main .elo7-team .ceo-container img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 767px) {
+  .main-container .main .elo7-team .ceo-container img {
+    width: 50%;
+    height: 50%;
+  }
+}
+.main-container .main .elo7-team .ceo-container .ceo-text {
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+  align-items: center;
+}
+.main-container .main .elo7-team .ceo-container .ceo-text h3 {
+  color: gray;
+  line-height: 40px;
+}
+@media (max-width: 767px) {
+  .main-container .main .elo7-team .ceo-container .ceo-text h3 {
+    font-size: small;
+  }
+}
+.main-container .main .elo7-team .ceo-container .ceo-text h4 {
+  color: orange;
+  font-style: italic;
+}
+@media (max-width: 767px) {
+  .main-container .main .elo7-team .ceo-container .ceo-text h4 {
+    font-size: small;
+  }
+}
+.main-container .main .elo7-team .ceo-container .ceo-text p {
+  color: gray;
+  width: 60%;
+  height: auto;
+  font-weight: 500;
+  margin-top: 50px;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+@media (max-width: 767px) {
+  .main-container .main .elo7-team .ceo-container .ceo-text p {
+    font-size: small;
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+.main-container .main .elo7-team .team-container {
+  padding-top: 50px;
+  width: 100%;
+  height: auto;
+}
+.main-container .main .elo7-team .team-container .team-tittle h3 {
+  padding-bottom: 20px;
+  color: gray;
+  font-size: x-large;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .main-container .main .elo7-team .team-container .team-tittle h3 {
+    font-size: medium;
+  }
+}
+.main-container .main .elo7-team .team-container .team-img {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .main-container .main .elo7-team .team-container .team-img {
+    width: fit-content;
+    flex-wrap: wrap;
+  }
+}
+.main-container .main .elo7-team .team-container .team-img img {
+  align-items: center;
+  padding-top: 30px;
+  padding-right: 5px;
+  width: 45%;
+}
+@media (max-width: 767px) {
+  .main-container .main .elo7-team .team-container .team-img img {
+    width: 40%;
+    padding-top: 10px;
+  }
+}
+.main-container .main .icons-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  padding: 50px 50px;
+}
+.main-container .main .icons-container .icons {
+  display: flex;
+  color: gray;
+  text-align: justify;
+  flex-direction: column;
+  width: 30%;
+  align-items: flex-start;
+}
+.main-container .main .icons-container .icons img {
+  width: fit-content;
+  align-self: center;
+}
+@media (max-width: 767px) {
+  .main-container .main .icons-container .icons img {
+    width: 60%;
+  }
+}
+.main-container .main .icons-container .icons h3 {
+  align-self: center;
+  padding: 30px 0;
+}
+@media (max-width: 767px) {
+  .main-container .main .icons-container .icons h3 {
+    font-size: small;
+    text-align: center;
+  }
+}
+.main-container .main .icons-container .icons p {
+  align-self: center;
+  width: 55%;
+}
+@media (max-width: 767px) {
+  .main-container .main .icons-container .icons p {
+    width: 80%;
+    font-size: small;
+  }
+}
+.main-container .main .elo7-space {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+.main-container .main .elo7-space a {
+  color: darkcyan;
+  font-size: larger;
+  font-weight: 700;
+  text-decoration: none;
+  padding-bottom: 50px;
+}
+@media (max-width: 767px) {
+  .main-container .main .elo7-space a {
+    font-size: small;
+  }
+}
+.main-container .main .elo7-space a span {
+  font-size: 15px;
+  position: relative;
+  bottom: 2px;
+}
+@media (max-width: 767px) {
+  .main-container .main .elo7-space a span {
+    font-size: 10px;
+  }
+}
+.main-container .main .elo7-space img {
+  width: 80%;
+}
+
+footer {
+  width: 100%;
+}
+footer .open-jobs {
+  color: gray;
+}
+footer .open-jobs h2 {
+  text-align: center;
+}
+footer .open-jobs h3 {
+  padding-left: 50px;
+}
+footer .open-jobs .jobs {
+  display: flex;
+  flex-direction: column;
+}
+footer .open-jobs .jobs a {
+  color: darkcyan;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=style.css.map */

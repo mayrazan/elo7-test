@@ -1,0 +1,273 @@
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./mixins.scss";
+
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    .header-container {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        flex-direction: column;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        h1 {
+            position: relative;
+            bottom: 16rem;
+            font-size: 4.3rem;
+            font-weight: 700;
+            color: white;
+
+            @media (max-width: 767px) {
+                font-size: 1.5rem;
+                bottom: 5.8rem;
+            }
+        }
+        p {
+            color: gray;
+            font-size: 1.3rem;
+            box-sizing: border-box;
+            padding: 0 3rem;
+            position: relative;
+            bottom: 3.5rem;
+            width: 90%;
+            margin-left: 5rem;
+
+            @media (max-width: 767px) {
+                font-size: 1rem;
+                bottom: 1.3rem;
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+        a {
+            color: darkcyan;
+            font-size: larger;
+            font-weight: 700;
+            text-decoration: none;
+
+            span {
+                font-size: 15px;
+                position: relative;
+                bottom: 2px;
+                @media (max-width: 767px) {
+                    font-size: 10px;
+                }
+            }
+
+            @media (max-width: 767px) {
+                font-size: small;
+            }
+        }
+    }
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .elo7-team {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(247, 247, 247);
+            align-items: center;
+            width: auto;
+            height: auto;
+            padding: 50px 50px;
+            @media (max-width: 767px) {
+                width: fit-content;
+            }
+            .ceo-container {
+                display: flex;
+                width: 100%;
+                height: auto;
+                
+                img {
+                   width: 100%;
+                   height: auto;
+                    @media (max-width: 767px) {
+                        width: 50%;
+                        height: 50%;
+                    }
+    
+                }
+                .ceo-text {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 40px;
+                    align-items: center;
+                
+                    h3 {
+                        color: gray;
+                        line-height: 40px;
+                        @media (max-width: 767px) {
+                            font-size: small;
+                        }
+                    }
+                    h4 {
+                        color: orange;
+                        font-style: italic;
+                        @media (max-width: 767px) {
+                            font-size: small;
+                        }
+                    }
+                    p {
+                        color: gray;
+                        width: 60%;
+                        height: auto;
+                        font-weight: 500;
+                        margin-top: 50px;
+                        font-size: 1.1rem;
+                        text-align: justify;
+
+                        @media (max-width: 767px) {
+                            font-size: small;
+                            width: auto;
+                            height: auto;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+                
+            }
+            .team-container {
+                padding-top: 50px;
+                width: 100%;
+                height: auto;
+                .team-tittle {
+                    h3 {
+                        padding-bottom: 20px;
+                        color: gray;
+                        font-size: x-large;
+                        text-align: center;
+
+                        @media (max-width: 767px) {
+                            font-size: medium;
+                        }
+                    }
+                }
+                .team-img {
+                    display: flex;
+                    justify-content: center;
+                    @media (max-width: 767px) {
+                        width: fit-content;
+                        flex-wrap: wrap;
+                    }
+                    img {
+                        align-items: center;
+                        padding-top: 30px;
+                        padding-right: 5px;
+                        width: 45%;
+
+                        @media (max-width: 767px) {
+                            width: 40%;
+                            padding-top: 10px;
+                            
+                        }
+                    }
+                } 
+            }
+        }
+        .icons-container {
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            padding: 50px 50px;
+            .icons {
+                display: flex;
+                color: gray;
+                text-align: justify;
+                flex-direction: column;
+                width: 30%;
+                align-items: flex-start;
+                img {
+                    width: fit-content;
+                    align-self: center;
+                    @media (max-width: 767px) {
+                        width: 60%;
+                    }
+                }
+                h3 {
+                    align-self: center;
+                    padding: 30px 0;
+                    @media (max-width: 767px) {
+                        font-size: small;
+                        text-align: center;
+                    }
+                }
+                p {
+                    align-self: center;
+                    width: 55%;
+                    @media (max-width: 767px) {
+                        width: 80%;
+                        font-size: small;
+                    }
+                }
+            }   
+        }
+        .elo7-space {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            align-items: center;
+            a {
+                color: darkcyan;
+                font-size: larger;
+                font-weight: 700;
+                text-decoration: none;
+                padding-bottom: 50px;
+                @media (max-width: 767px) {
+                    font-size: small;
+                }
+
+                span {
+                    font-size: 15px;
+                    position: relative;
+                    bottom: 2px;
+                    @media (max-width: 767px) {
+                        font-size: 10px;
+                    }
+                }
+            }   
+            img {
+                width: 80%;
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    .open-jobs {
+        color: gray;
+        h2 {
+            text-align: center;
+        }
+        h3 {
+            padding-left: 50px;
+        }
+        .jobs {
+            display: flex;
+            flex-direction: column;
+            
+            a {
+                color: darkcyan;
+                text-decoration: none;
+                font-weight: 700;
+            }
+        }
+        
+    }
+}
+
