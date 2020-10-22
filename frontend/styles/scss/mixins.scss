@@ -1,0 +1,20 @@
+@mixin simple-flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin sizes($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin text-elements($bottom, $font, $position) {
+  bottom: $bottom;
+  font-size: $font;
+  position: $position;
+}
+
+@mixin color-elements($color, $weight) {
+  color: $color;
+  font-weight: $weight;
+}

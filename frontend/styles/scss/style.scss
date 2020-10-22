@@ -2,339 +2,360 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 
+%hr-content {
+  border: 0;
+  border-top: 2px solid;
+  color: rgb(212, 212, 212);
+  width: 13rem;
+  margin-bottom: 20px;
+}
+
+%jobs-location {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
+}
+
 header {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    .header-container {
-        width: 100%;
-        height: auto;
-        text-align: center;
-        flex-direction: column;
-        img {
-            width: 100%;
-            height: auto;
-        }
-        h1 {
-            position: relative;
-            bottom: 16rem;
-            font-size: 4.3rem;
-            font-weight: 700;
-            color: white;
+  @include sizes(100%, auto);
+  @include simple-flex(column);
 
-            @media (max-width: 767px) {
-                font-size: 1.5rem;
-                bottom: 5.8rem;
-            }
-        }
-        p {
-            color: gray;
-            font-size: 1.3rem;
-            box-sizing: border-box;
-            padding: 0 3rem;
-            position: relative;
-            bottom: 3.5rem;
-            width: 90%;
-            margin-left: 5rem;
+  .header-container {
+    @include sizes(100%, auto);
+    text-align: center;
+    @include simple-flex(column);
 
-            @media (max-width: 767px) {
-                font-size: 1rem;
-                bottom: 1.3rem;
-                width: 100%;
-                margin-left: 0;
-            }
-        }
-        .line {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            justify-content: center;
-            align-content: center;
-            hr {
-                border: 0;
-                border-top: 2px solid;
-                color: rgb(212, 212, 212);
-                width: 13rem;
-                margin-bottom: 20px;
-                @media (max-width: 767px) {
-                    width: 9rem;
-                }
-            }
-        }
-        a {
-            color: darkcyan;
-            font-size: larger;
-            font-weight: 700;
-            text-decoration: none;
-            span {
-                font-size: 15px;
-                position: relative;
-                bottom: 2px;
-                @media (max-width: 767px) {
-                    font-size: 10px;
-                }
-            }
-
-            @media (max-width: 767px) {
-                font-size: small;
-            }
-        }
+    img {
+      @include sizes(100%, auto);
     }
+
+    h1 {
+      @include text-elements(16rem, 4.3rem, relative);
+      @include color-elements(white, $font-weight);
+
+      @media ($width-media) {
+        font-size: 1.5rem;
+        bottom: 5.8rem;
+      }
+    }
+    p {
+      @include text-elements(3.5rem, 1.3rem, relative);
+      color: $text-color;
+      box-sizing: border-box;
+      padding: 0 3rem;
+      width: 90%;
+      margin-left: 5rem;
+
+      @media ($width-media) {
+        font-size: 1rem;
+        bottom: 1.3rem;
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+
+    .line {
+      @include simple-flex(row);
+      width: 100%;
+      justify-content: center;
+      align-content: center;
+
+      hr {
+        @extend %hr-content;
+
+        @media ($width-media) {
+          width: 9rem;
+        }
+      }
+    }
+
+    a {
+      @include color-elements($text-link-color, $font-weight);
+      font-size: larger;
+      text-decoration: none;
+
+      span {
+        @include text-elements(2px, 15px, relative);
+
+        @media ($width-media) {
+          font-size: 10px;
+        }
+      }
+
+      @media ($width-media) {
+        font-size: small;
+      }
+    }
+  }
 }
 
 .main-container {
-    display: flex;
+  @include sizes(100%, auto);
+  display: flex;
+  margin-top: 50px;
+
+  .main {
+    @include simple-flex(column);
     width: 100%;
-    height: auto;
-    margin-top: 50px;
-    .main {
+
+    .elo7-team {
+      @include simple-flex(column);
+      @include sizes(auto, auto);
+      background-color: rgb(247, 247, 247);
+      align-items: center;
+      padding: 50px 50px;
+
+      @media ($width-media) {
+        width: fit-content;
+      }
+
+      .ceo-container {
         display: flex;
-        flex-direction: column;
-        width: 100%;
-        .elo7-team {
-            display: flex;
-            flex-direction: column;
-            background-color: rgb(247, 247, 247);
+        @include sizes(100%, auto);
+
+        img {
+          @include sizes(100%, auto);
+          cursor: pointer;
+
+          @media ($width-media) {
+            @include sizes(50%, 50%);
+          }
+        }
+
+        .ceo-text {
+          @include simple-flex(column);
+          @include sizes(80%, 100%);
+          padding: 0 40px;
+          align-self: flex-start;
+
+          h3 {
+            color: $text-color;
+            line-height: 40px;
+
+            @media ($width-media) {
+              font-size: small;
+            }
+          }
+
+          h4 {
+            color: orange;
+            font-style: italic;
+
+            @media ($width-media) {
+              font-size: small;
+            }
+          }
+
+          p {
+            @include sizes(85%, auto);
+            @include color-elements($text-color, 500);
+            margin-top: 50px;
+            font-size: 1.1rem;
+            text-align: justify;
+
+            @media ($width-media) {
+              @include sizes(auto, auto);
+              font-size: small;
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+
+      .team-container {
+        @include sizes(100%, auto);
+        padding-top: 50px;
+
+        .team-tittle {
+          h3 {
+            padding-bottom: 20px;
+            color: $text-color;
+            font-size: x-large;
+            text-align: center;
+
+            @media ($width-media) {
+              font-size: medium;
+            }
+          }
+        }
+
+        .team-img {
+          display: flex;
+          justify-content: center;
+
+          @media ($width-media) {
+            width: fit-content;
+            flex-wrap: wrap;
+          }
+
+          img {
             align-items: center;
-            width: auto;
-            height: auto;
-            padding: 50px 50px;
-            @media (max-width: 767px) {
-                width: fit-content;
-            }
-            .ceo-container {
-                display: flex;
-                width: 100%;
-                height: auto;
-                
-                img {
-                   width: 100%;
-                   height: auto;
-                   cursor: pointer;
-                    @media (max-width: 767px) {
-                        width: 50%;
-                        height: 50%;
-                    }
-    
-                }
-                .ceo-text {
-                    display: flex;
-                    flex-direction: column;
-                    padding: 0 40px;
-                    width: 80%;
-                    height: 100%;
-                    align-self: flex-start;
-                
-                    h3 {
-                        color: gray;
-                        line-height: 40px;
-                        @media (max-width: 767px) {
-                            font-size: small;
-                        }
-                    }
-                    h4 {
-                        color: orange;
-                        font-style: italic;
-                        @media (max-width: 767px) {
-                            font-size: small;
-                        }
-                    }
-                    p {
-                        color: gray;
-                        width: 85%;
-                        height: auto;
-                        font-weight: 500;
-                        margin-top: 50px;
-                        font-size: 1.1rem;
-                        text-align: justify;
+            padding-top: 30px;
+            padding-right: 5px;
+            width: 45%;
 
-                        @media (max-width: 767px) {
-                            font-size: small;
-                            width: auto;
-                            height: auto;
-                            margin-top: 20px;
-                        }
-                    }
-                }
-                
+            @media ($width-media) {
+              width: 40%;
+              padding-top: 10px;
             }
-            .team-container {
-                padding-top: 50px;
-                width: 100%;
-                height: auto;
-                .team-tittle {
-                    h3 {
-                        padding-bottom: 20px;
-                        color: gray;
-                        font-size: x-large;
-                        text-align: center;
-
-                        @media (max-width: 767px) {
-                            font-size: medium;
-                        }
-                    }
-                }
-                .team-img {
-                    display: flex;
-                    justify-content: center;
-                    @media (max-width: 767px) {
-                        width: fit-content;
-                        flex-wrap: wrap;
-                    }
-                    img {
-                        align-items: center;
-                        padding-top: 30px;
-                        padding-right: 5px;
-                        width: 45%;
-
-                        @media (max-width: 767px) {
-                            width: 40%;
-                            padding-top: 10px;
-                            
-                        }
-                    }
-                } 
-            }
+          }
         }
-        .icons-container {
-            width: auto;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            padding: 50px 50px;
-            .icons {
-                display: flex;
-                color: gray;
-                text-align: justify;
-                flex-direction: column;
-                width: 30%;
-                align-items: flex-start;
-                img {
-                    width: fit-content;
-                    align-self: center;
-                    @media (max-width: 767px) {
-                        width: 60%;
-                    }
-                }
-                h3 {
-                    align-self: center;
-                    padding: 30px 0;
-                    @media (max-width: 767px) {
-                        font-size: small;
-                        text-align: center;
-                    }
-                }
-                p {
-                    align-self: center;
-                    width: 55%;
-                    @media (max-width: 767px) {
-                        width: 80%;
-                        font-size: small;
-                    }
-                }
-            }   
-        }
-        .elo7-space {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: auto;
-            align-items: center;
-            .line {
-                display: flex;
-                flex-direction: row;
-                width: 100%;
-                justify-content: center;
-                align-content: center;
-                hr {
-                    border: 0;
-                    border-top: 2px solid;
-                    color: rgb(212, 212, 212);
-                    width: 13rem;
-                    margin-bottom: 20px;
-                    @media (max-width: 767px) {
-                        width: 9rem;
-                    }
-                }
-            }
-            a {
-                color: darkcyan;
-                font-size: larger;
-                font-weight: 700;
-                text-decoration: none;
-                padding-bottom: 50px;
-                @media (max-width: 767px) {
-                    font-size: small;
-                }
-
-                span {
-                    font-size: 15px;
-                    position: relative;
-                    bottom: 2px;
-                    @media (max-width: 767px) {
-                        font-size: 10px;
-                    }
-                }
-            }   
-            img {
-                width: 80%;
-            }
-        }
+      }
     }
+
+    .icons-container {
+      @include sizes(auto, auto);
+      @include simple-flex(row);
+      padding: 50px 50px;
+
+      .icons {
+        @include simple-flex(column);
+        color: $text-color;
+        text-align: justify;
+        width: 30%;
+        align-items: flex-start;
+
+        img {
+          width: fit-content;
+          align-self: center;
+
+          @media ($width-media) {
+            width: 60%;
+          }
+        }
+
+        h3 {
+          align-self: center;
+          padding: 30px 0;
+
+          @media ($width-media) {
+            font-size: small;
+            text-align: center;
+          }
+        }
+
+        p {
+          align-self: center;
+          width: 55%;
+
+          @media ($width-media) {
+            width: 80%;
+            font-size: small;
+          }
+        }
+      }
+    }
+
+    .elo7-space {
+      @include simple-flex(column);
+      @include sizes(100%, auto);
+      align-items: center;
+
+      .line {
+        @include simple-flex(row);
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+
+        hr {
+          @extend %hr-content;
+
+          @media ($width-media) {
+            width: 9rem;
+          }
+        }
+      }
+
+      a {
+        @include color-elements($text-link-color, $font-weight);
+        font-size: larger;
+        text-decoration: none;
+        padding-bottom: 50px;
+
+        @media ($width-media) {
+          font-size: small;
+        }
+
+        span {
+          @include text-elements(2px, 15px, relative);
+
+          @media ($width-media) {
+            font-size: 10px;
+          }
+        }
+      }
+
+      img {
+        width: 80%;
+      }
+    }
+  }
 }
 
 footer {
-    width: 100%;
-    height: auto;
-    .open-jobs {
-        color: gray;
-        padding-left: 50px;
-        h2 {
-            text-align: center;
-            padding-top: 50px;
-            @media (max-width: 767px) {
-                font-size: 20px;
-            }
-        }
-        h3 {
-            padding: 40px 0;
-            @media (max-width: 767px) {
-                font-size: 15px;
-            }
-        }
-        .jobs {
-            display: flex;
-            flex-direction: column;
-            .jobs-info {
-                display: flex;
-                flex-direction: row;
-                margin-bottom: 20px;
-                font-weight: 700;
-                .jobs-info-list {
-                    width: 70%;
-                    a {
-                        color: darkcyan;
-                        text-decoration: none;
-                    }
-                }
-                .jobs-info-location {
-                    display: flex;
-                    width: 70%;
-                    justify-content: flex-end;
-                    margin-right: 100px;
-                }
-                .jobs-remote {
-                    display: flex;
-                    justify-content: flex-end;
-                    margin-right: 100px;
-                    width: 25%;
-                }
-            }
-            
-            
-        }
-        
-    }
-}
+  @include sizes(100%, auto);
 
+  .open-jobs {
+    color: $text-color;
+    padding-left: 50px;
+
+    h2 {
+      text-align: center;
+      padding-top: 50px;
+
+      @media ($width-media) {
+        font-size: 18px;
+      }
+    }
+
+    h3 {
+      padding: 40px 0;
+
+      @media ($width-media) {
+        font-size: 15px;
+      }
+    }
+
+    .jobs {
+      @include simple-flex(column);
+
+      .jobs-info {
+        @include simple-flex(row);
+        margin-bottom: 20px;
+        font-weight: $font-weight;
+
+        .jobs-info-list {
+          width: 70%;
+
+          a {
+            color: $text-link-color;
+            text-decoration: none;
+          }
+
+          @media ($width-media) {
+            font-size: 15px;
+          }
+        }
+
+        .jobs-info-location {
+          @extend %jobs-location;
+          width: 70%;
+
+          @media ($width-media) {
+            font-size: 15px;
+          }
+        }
+
+        .jobs-remote {
+          @extend %jobs-location;
+          width: 25%;
+
+          @media ($width-media) {
+            font-size: 15px;
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+  }
+}

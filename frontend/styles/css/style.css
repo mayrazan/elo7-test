@@ -10,6 +10,20 @@ html {
   font-family: "Raleway", Courier, monospace;
 }
 
+.main-container .main .elo7-space .line hr, header .header-container .line hr {
+  border: 0;
+  border-top: 2px solid;
+  color: #d4d4d4;
+  width: 13rem;
+  margin-bottom: 20px;
+}
+
+footer .open-jobs .jobs .jobs-info .jobs-remote, footer .open-jobs .jobs .jobs-info .jobs-info-location {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
+}
+
 header {
   width: 100%;
   height: auto;
@@ -20,6 +34,7 @@ header .header-container {
   width: 100%;
   height: auto;
   text-align: center;
+  display: flex;
   flex-direction: column;
 }
 header .header-container img {
@@ -27,11 +42,11 @@ header .header-container img {
   height: auto;
 }
 header .header-container h1 {
-  position: relative;
   bottom: 16rem;
   font-size: 4.3rem;
-  font-weight: 700;
+  position: relative;
   color: white;
+  font-weight: 700;
 }
 @media (max-width: 767px) {
   header .header-container h1 {
@@ -40,12 +55,12 @@ header .header-container h1 {
   }
 }
 header .header-container p {
-  color: gray;
+  bottom: 3.5rem;
   font-size: 1.3rem;
+  position: relative;
+  color: gray;
   box-sizing: border-box;
   padding: 0 3rem;
-  position: relative;
-  bottom: 3.5rem;
   width: 90%;
   margin-left: 5rem;
 }
@@ -64,13 +79,6 @@ header .header-container .line {
   justify-content: center;
   align-content: center;
 }
-header .header-container .line hr {
-  border: 0;
-  border-top: 2px solid;
-  color: #d4d4d4;
-  width: 13rem;
-  margin-bottom: 20px;
-}
 @media (max-width: 767px) {
   header .header-container .line hr {
     width: 9rem;
@@ -78,14 +86,14 @@ header .header-container .line hr {
 }
 header .header-container a {
   color: darkcyan;
-  font-size: larger;
   font-weight: 700;
+  font-size: larger;
   text-decoration: none;
 }
 header .header-container a span {
+  bottom: 2px;
   font-size: 15px;
   position: relative;
-  bottom: 2px;
 }
 @media (max-width: 767px) {
   header .header-container a span {
@@ -99,9 +107,9 @@ header .header-container a span {
 }
 
 .main-container {
-  display: flex;
   width: 100%;
   height: auto;
+  display: flex;
   margin-top: 50px;
 }
 .main-container .main {
@@ -112,10 +120,10 @@ header .header-container a span {
 .main-container .main .elo7-team {
   display: flex;
   flex-direction: column;
-  background-color: #f7f7f7;
-  align-items: center;
   width: auto;
   height: auto;
+  background-color: #f7f7f7;
+  align-items: center;
   padding: 50px 50px;
 }
 @media (max-width: 767px) {
@@ -142,9 +150,9 @@ header .header-container a span {
 .main-container .main .elo7-team .ceo-container .ceo-text {
   display: flex;
   flex-direction: column;
-  padding: 0 40px;
   width: 80%;
   height: 100%;
+  padding: 0 40px;
   align-self: flex-start;
 }
 .main-container .main .elo7-team .ceo-container .ceo-text h3 {
@@ -166,9 +174,9 @@ header .header-container a span {
   }
 }
 .main-container .main .elo7-team .ceo-container .ceo-text p {
-  color: gray;
   width: 85%;
   height: auto;
+  color: gray;
   font-weight: 500;
   margin-top: 50px;
   font-size: 1.1rem;
@@ -176,16 +184,16 @@ header .header-container a span {
 }
 @media (max-width: 767px) {
   .main-container .main .elo7-team .ceo-container .ceo-text p {
-    font-size: small;
     width: auto;
     height: auto;
+    font-size: small;
     margin-top: 20px;
   }
 }
 .main-container .main .elo7-team .team-container {
-  padding-top: 50px;
   width: 100%;
   height: auto;
+  padding-top: 50px;
 }
 .main-container .main .elo7-team .team-container .team-tittle h3 {
   padding-bottom: 20px;
@@ -229,9 +237,9 @@ header .header-container a span {
 }
 .main-container .main .icons-container .icons {
   display: flex;
+  flex-direction: column;
   color: gray;
   text-align: justify;
-  flex-direction: column;
   width: 30%;
   align-items: flex-start;
 }
@@ -278,13 +286,6 @@ header .header-container a span {
   justify-content: center;
   align-content: center;
 }
-.main-container .main .elo7-space .line hr {
-  border: 0;
-  border-top: 2px solid;
-  color: #d4d4d4;
-  width: 13rem;
-  margin-bottom: 20px;
-}
 @media (max-width: 767px) {
   .main-container .main .elo7-space .line hr {
     width: 9rem;
@@ -292,8 +293,8 @@ header .header-container a span {
 }
 .main-container .main .elo7-space a {
   color: darkcyan;
-  font-size: larger;
   font-weight: 700;
+  font-size: larger;
   text-decoration: none;
   padding-bottom: 50px;
 }
@@ -303,9 +304,9 @@ header .header-container a span {
   }
 }
 .main-container .main .elo7-space a span {
+  bottom: 2px;
   font-size: 15px;
   position: relative;
-  bottom: 2px;
 }
 @media (max-width: 767px) {
   .main-container .main .elo7-space a span {
@@ -330,7 +331,7 @@ footer .open-jobs h2 {
 }
 @media (max-width: 767px) {
   footer .open-jobs h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 footer .open-jobs h3 {
@@ -358,17 +359,27 @@ footer .open-jobs .jobs .jobs-info .jobs-info-list a {
   color: darkcyan;
   text-decoration: none;
 }
+@media (max-width: 767px) {
+  footer .open-jobs .jobs .jobs-info .jobs-info-list {
+    font-size: 15px;
+  }
+}
 footer .open-jobs .jobs .jobs-info .jobs-info-location {
-  display: flex;
   width: 70%;
-  justify-content: flex-end;
-  margin-right: 100px;
+}
+@media (max-width: 767px) {
+  footer .open-jobs .jobs .jobs-info .jobs-info-location {
+    font-size: 15px;
+  }
 }
 footer .open-jobs .jobs .jobs-info .jobs-remote {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 100px;
   width: 25%;
+}
+@media (max-width: 767px) {
+  footer .open-jobs .jobs .jobs-info .jobs-remote {
+    font-size: 15px;
+    justify-content: flex-start;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
