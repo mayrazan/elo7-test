@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elo7</title>
     <link rel="stylesheet" href="./styles/css/style.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;800&display=swap" rel="stylesheet">
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>-->
+   
+   
 </head>
 <body>
     <header>
@@ -14,7 +16,8 @@
             <img src="./assets/img/foto-header.png" alt="Foto elo7">
             <h1>Trabalhe no Elo7</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisque ut efficitur ex, at malesuada ligula. Pellentesque odio ipsum, viverra a eros sit amet, fringilla sagittis augue. Fusce risus tellus, tempus quis lacinia in, vehicula ut turpis.</p>
-            <a href="#">VAGAS EM ABERTO<span> &gt&gt</span></a>
+            <div class="line"><hr></div>
+            <a href="#">VAGAS EM ABERTO<span> &#x226B;</span></a>
         </div>
     </header>
     <section class="main-container">
@@ -58,23 +61,29 @@
                 </div>
             </div>
             <div class="elo7-space">
-                <a href="#">SAIBA MAIS<span> &#x226B; &#8811;</span></a>
+                <div class="line"><hr></div>
+                <a href="#">SAIBA MAIS<span> &#x226B;</span></a>
                 <img src="./assets/img/foto-bottom.png" alt="Elo7">
             </div>
         </div>
-        
     </section>
     <footer>
         <div class="open-jobs">
             <h2>VAGAS EM ABERTO</h2>
             <h3>DESENVOLVIMENTO</h3>
-            <div class="jobs">
-                <a href="#">d</a>
-                <a href="#">d</a>
-                <a href="#">d</a>
-            </div>
-            
-        </div>
+            <div class="jobs" id="app">
+                <div v-for="jobs in info" class="jobs-info">
+                    <div class="jobs-info-list"><a :href="jobs.link" target="_blank">{{jobs.cargo}}</a></div>
+                    <div v-if="jobs.localizacao" class="jobs-info-location">
+                        {{jobs.localizacao.bairro}} - {{jobs.localizacao.cidade}}, {{jobs.localizacao.pais}}
+                    </div>
+                    <div class="jobs-remote" v-else="localizacao">{{localizacao}}</div>
+                </div>
+            </div> 
+        </div> 
     </footer>
+    <script src="./script/node_modules/axios/dist/axios.js"></script>
+    <script src="./script/node_modules/vue/dist/vue.js"></script>
+    <script src="./script/vagas.js"></script>
 </body>
 </html>

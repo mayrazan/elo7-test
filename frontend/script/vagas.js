@@ -1,59 +1,33 @@
-const vagas = {
-    "vagas": [
-        {
-            "cargo": "Desenvolvedor Mobile Senior (Android e iOS)",
-            "ativa": true,
-            "link": "http://elo7.dev/vaga/desenvolvedor-mobile-senior",
-            "localizacao": {
-                "bairro": "Vila Olímpia",
-                "cidade": "São Paulo",
-                "pais": "Brasil"
-            }
-        },
-        {
-            "cargo": "Desenvolvedor Mobile Junior (Android)",
-            "ativa": false,
-            "link": "http://elo7.dev/vaga/desenvolvedor-mobile-junior",
-            "localizacao": {
-                "bairro": "Vila Olímpia",
-                "cidade": "São Paulo",
-                "pais": "Brasil"
-            }
-        },
-        {
-            "cargo": "Desenvolvedor Java Senior",
-            "ativa": true,
-            "link": "http://elo7.dev/vaga/desenvolvedor-java-senior",
-            "localizacao": {
-                "bairro": "Vila Olímpia",
-                "cidade": "São Paulo",
-                "pais": "Brasil"
-            }
-        },
-        {
-            "cargo": "Desenvolvedor Front end",
-            "ativa": true,
-            "link": "http://elo7.dev/vaga/desenvolvedor-front-end",
-            "localizacao": {
-                "bairro": "Vila Olímpia",
-                "cidade": "São Paulo",
-                "pais": "Brasil"
-            }
-        },
-        {
-            "cargo": "Desenvolvedor Java Junior",
-            "ativa": false,
-            "link": "http://elo7.dev/vaga/desenvolvedor-java-jr",
-            "localizacao": {
-                "bairro": "Vila Olímpia",
-                "cidade": "São Paulo",
-                "pais": "Brasil"
-            }
-        },
-        {
-            "cargo": "Desenvolvedor Java Junior",
-            "ativa": true,
-            "link": "http://elo7.dev/vaga/desenvolvedor-java-jr"
-        }
-    ]
-}
+ new Vue({
+	el: '#app',
+	data() {
+		return {
+			info: [],
+			localizacao: null
+		}
+	},
+	methods: {
+		ativa: function(lista){
+			return lista.filter(vaga => vaga.ativa);
+		},
+		local: function(lista) {
+			const a = this.ativa(lista);
+			const l = "Remoto";
+			if (a.localizacao === undefined) {
+				a.localizacao = l;
+			}
+			this.localizacao=a.localizacao;
+			return a;
+		}
+	},
+	mounted() {
+		axios
+			.get('http://www.mocky.io/v2/5d6fb6b1310000f89166087b')
+			.then(response => (this.info = this.local(response.data.vagas)))
+	},
+	created(){
+		this.info;
+		this.localizacao;
+	}
+})
+

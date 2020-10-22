@@ -45,12 +45,28 @@ header {
                 margin-left: 0;
             }
         }
+        .line {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+            align-content: center;
+            hr {
+                border: 0;
+                border-top: 2px solid;
+                color: rgb(212, 212, 212);
+                width: 13rem;
+                margin-bottom: 20px;
+                @media (max-width: 767px) {
+                    width: 9rem;
+                }
+            }
+        }
         a {
             color: darkcyan;
             font-size: larger;
             font-weight: 700;
             text-decoration: none;
-
             span {
                 font-size: 15px;
                 position: relative;
@@ -71,6 +87,7 @@ header {
     display: flex;
     width: 100%;
     height: auto;
+    margin-top: 50px;
     .main {
         display: flex;
         flex-direction: column;
@@ -94,6 +111,7 @@ header {
                 img {
                    width: 100%;
                    height: auto;
+                   cursor: pointer;
                     @media (max-width: 767px) {
                         width: 50%;
                         height: 50%;
@@ -104,7 +122,9 @@ header {
                     display: flex;
                     flex-direction: column;
                     padding: 0 40px;
-                    align-items: center;
+                    width: 80%;
+                    height: 100%;
+                    align-self: flex-start;
                 
                     h3 {
                         color: gray;
@@ -122,7 +142,7 @@ header {
                     }
                     p {
                         color: gray;
-                        width: 60%;
+                        width: 85%;
                         height: auto;
                         font-weight: 500;
                         margin-top: 50px;
@@ -221,6 +241,23 @@ header {
             width: 100%;
             height: auto;
             align-items: center;
+            .line {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: center;
+                align-content: center;
+                hr {
+                    border: 0;
+                    border-top: 2px solid;
+                    color: rgb(212, 212, 212);
+                    width: 13rem;
+                    margin-bottom: 20px;
+                    @media (max-width: 767px) {
+                        width: 9rem;
+                    }
+                }
+            }
             a {
                 color: darkcyan;
                 font-size: larger;
@@ -249,23 +286,53 @@ header {
 
 footer {
     width: 100%;
+    height: auto;
     .open-jobs {
         color: gray;
+        padding-left: 50px;
         h2 {
             text-align: center;
+            padding-top: 50px;
+            @media (max-width: 767px) {
+                font-size: 20px;
+            }
         }
         h3 {
-            padding-left: 50px;
+            padding: 40px 0;
+            @media (max-width: 767px) {
+                font-size: 15px;
+            }
         }
         .jobs {
             display: flex;
             flex-direction: column;
-            
-            a {
-                color: darkcyan;
-                text-decoration: none;
+            .jobs-info {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 20px;
                 font-weight: 700;
+                .jobs-info-list {
+                    width: 70%;
+                    a {
+                        color: darkcyan;
+                        text-decoration: none;
+                    }
+                }
+                .jobs-info-location {
+                    display: flex;
+                    width: 70%;
+                    justify-content: flex-end;
+                    margin-right: 100px;
+                }
+                .jobs-remote {
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-right: 100px;
+                    width: 25%;
+                }
             }
+            
+            
         }
         
     }

@@ -57,6 +57,25 @@ header .header-container p {
     margin-left: 0;
   }
 }
+header .header-container .line {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+header .header-container .line hr {
+  border: 0;
+  border-top: 2px solid;
+  color: #d4d4d4;
+  width: 13rem;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  header .header-container .line hr {
+    width: 9rem;
+  }
+}
 header .header-container a {
   color: darkcyan;
   font-size: larger;
@@ -83,6 +102,7 @@ header .header-container a span {
   display: flex;
   width: 100%;
   height: auto;
+  margin-top: 50px;
 }
 .main-container .main {
   display: flex;
@@ -111,6 +131,7 @@ header .header-container a span {
 .main-container .main .elo7-team .ceo-container img {
   width: 100%;
   height: auto;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .main-container .main .elo7-team .ceo-container img {
@@ -122,7 +143,9 @@ header .header-container a span {
   display: flex;
   flex-direction: column;
   padding: 0 40px;
-  align-items: center;
+  width: 80%;
+  height: 100%;
+  align-self: flex-start;
 }
 .main-container .main .elo7-team .ceo-container .ceo-text h3 {
   color: gray;
@@ -144,7 +167,7 @@ header .header-container a span {
 }
 .main-container .main .elo7-team .ceo-container .ceo-text p {
   color: gray;
-  width: 60%;
+  width: 85%;
   height: auto;
   font-weight: 500;
   margin-top: 50px;
@@ -248,6 +271,25 @@ header .header-container a span {
   height: auto;
   align-items: center;
 }
+.main-container .main .elo7-space .line {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+.main-container .main .elo7-space .line hr {
+  border: 0;
+  border-top: 2px solid;
+  color: #d4d4d4;
+  width: 13rem;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .main-container .main .elo7-space .line hr {
+    width: 9rem;
+  }
+}
 .main-container .main .elo7-space a {
   color: darkcyan;
   font-size: larger;
@@ -276,24 +318,57 @@ header .header-container a span {
 
 footer {
   width: 100%;
+  height: auto;
 }
 footer .open-jobs {
   color: gray;
+  padding-left: 50px;
 }
 footer .open-jobs h2 {
   text-align: center;
+  padding-top: 50px;
+}
+@media (max-width: 767px) {
+  footer .open-jobs h2 {
+    font-size: 20px;
+  }
 }
 footer .open-jobs h3 {
-  padding-left: 50px;
+  padding: 40px 0;
+}
+@media (max-width: 767px) {
+  footer .open-jobs h3 {
+    font-size: 15px;
+  }
 }
 footer .open-jobs .jobs {
   display: flex;
   flex-direction: column;
 }
-footer .open-jobs .jobs a {
+footer .open-jobs .jobs .jobs-info {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+footer .open-jobs .jobs .jobs-info .jobs-info-list {
+  width: 70%;
+}
+footer .open-jobs .jobs .jobs-info .jobs-info-list a {
   color: darkcyan;
   text-decoration: none;
-  font-weight: 700;
+}
+footer .open-jobs .jobs .jobs-info .jobs-info-location {
+  display: flex;
+  width: 70%;
+  justify-content: flex-end;
+  margin-right: 100px;
+}
+footer .open-jobs .jobs .jobs-info .jobs-remote {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
+  width: 25%;
 }
 
 /*# sourceMappingURL=style.css.map */
