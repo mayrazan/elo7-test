@@ -1,3 +1,5 @@
+package main;
+
 public class Posicao {
   private int x;
   private int y;
@@ -34,6 +36,6 @@ public class Posicao {
   }
 
   public String toString(){
-    return this.direcao.toString() + " " + this.getX() + " " + this.getY(); 
+    return this.getX() + " " + this.getY() + " " + this.direcao.toString() ; 
   }
 }

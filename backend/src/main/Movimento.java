@@ -1,4 +1,4 @@
- 
+package main;
 public enum Movimento {
     LEFT("L"), RIGTH("R"), MOVE("M");
   
