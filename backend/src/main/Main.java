@@ -27,10 +27,8 @@ public class Main {
 
       switch (escolha) {
         case 1:
-          System.out.println("Adicionar sonda: ");
-          String nome = scanner.next();
-          s.setNomeSonda(nome);
           terreno.addSonda(s);
+          System.out.println("Sonda adicionada.");
           break;
 
         case 2:

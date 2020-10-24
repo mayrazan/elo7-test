@@ -2,8 +2,6 @@ package main;
 
 public class Sonda {
 
-  private String nome;
-
   public void viraDireita(Posicao posicao) {
     //faz o movimento no sentido horário pegando a posição atual da direção
     switch (posicao.getDirecao()) {
@@ -76,11 +74,4 @@ public class Sonda {
     }
   }
 
-  public void setNomeSonda(String s) {
-    this.nome = s;
-  }
-
-  public String getNomeSonda() {
-    return this.nome;
-  }
 }

@@ -15,7 +15,7 @@ public class Terreno {
   }
 
   public Sonda getSonda() {
-    return sonda;
+    return this.sonda;
   }
 
   public void setSonda(Sonda sonda) {

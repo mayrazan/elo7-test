@@ -6,7 +6,6 @@ package test;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import main.Direcao;
@@ -24,11 +23,6 @@ public class SondaTest {
 	 */
 	private Posicao p;
 	private Sonda s;
-	
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-		
-	}
 
 	/**
 	 * @throws java.lang.Exception

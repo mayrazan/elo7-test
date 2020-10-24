@@ -6,7 +6,6 @@ package test;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import main.Direcao;
@@ -22,10 +21,6 @@ public class PosicaoTest {
 	 * @throws java.lang.Exception
 	 */
 	private Posicao posicao;
-	
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
 
 	/**
 	 * @throws java.lang.Exception
